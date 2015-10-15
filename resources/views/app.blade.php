@@ -73,8 +73,7 @@
 <div class="container">
 
 		<div class="row">
-		
-		
+
 			<div class="col-md-9">
 				
 				@if(Session::has('success'))
@@ -98,19 +97,25 @@
 
 			</div>
 
-
-
 		</div>
 
 </div>	
 	
-    <footer class="footer">
-      <div class="container">
-        <p class="text-muted">Place sticky footer content here.</p>
-      </div>
-    </footer>
+<footer class="footer">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-8 padding-top-10">
+				<p class="text-muted">Footer Content Here.</p>
+			</div>
+			<div class="col-md-4 padding-top-10">
+				<p class="text-muted">Footer Content Here.</p>
+			</div>
+		</div>
+	</div>
+</footer>
 
-	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-	<script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.1/js/bootstrap.min.js"></script>
+	<script src="{{ url('/js/jquery-2.1.4.min.js') }}"></script>
+	<script src="{{ url('/js/bootstrap.min.js') }}"></script>
+
 </body>
 </html>

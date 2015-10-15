@@ -6,10 +6,6 @@ use Auth;
 class PagesController extends Controller {
 
 	
-	public function index()
-	{
-		return view('welcome');
-	}
 	
 	public function dashboard()
 	{
