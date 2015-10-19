@@ -2,7 +2,7 @@
 
 @section('content')
 
-	<h1>Dashboard</h1>
+	<h1>Dashboard - Hello {{ Auth::user()->first_name }}</h1>
 	
 	<br /><br />
 
@@ -16,12 +16,12 @@
                                     <i class="fa fa-comments fa-3x"></i>		<!-- fa-3x means 3em making it 3 times bigger than normal -->
                                 </div>
                                 <div class="col-xs-8 text-right">
-                                    <div class="huge">26</div>
+                                    <div class="huge">{{ $blog_count }}</div>	<!--  $blog_count comes from CountBlogsComposer -->
                                     <div>Blogs</div>
                                 </div>
                             </div>
                         </div>
-                        <a href="#">
+                        <a href="{{ url('dashboard/blogs') }}">
                             <div class="panel-footer">
                                 <span class="pull-left">View</span>
                                 <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>

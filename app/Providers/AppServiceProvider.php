@@ -27,6 +27,7 @@ class AppServiceProvider extends ServiceProvider {
 	
 	View::composer('*', 'App\Http\ViewComposers\RecentBlogsComposer');
 	View::composer('*', 'App\Http\ViewComposers\MobileDetectComposer');
+	View::composer('dashboard', 'App\Http\ViewComposers\CountBlogsComposer');
 	
 	}
 
