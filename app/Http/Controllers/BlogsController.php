@@ -30,6 +30,33 @@ class BlogsController extends Controller {
 	
 		return view('blogs.create');
 	}
+	
+	
+	public function upload($id)
+	{
+	
+		return view('blogs.upload')->with('id', $id);
+		
+	}
+	
+	
+	public function storeUpload(Request $request, $id){
+	
+			if($request->hasFile('image')){
+			
+			    $file = $request->file('image');
+			    $filename = $file->getClientOriginalName();
+			    $extension = $file -> getClientOriginalExtension();
+			    
+			}
+			
+            $destinationPath = public_path() . '/uploads/';
+            $request->file('image')->move($destinationPath, $id.'.'.$extension);		/*  move( /uploads/ , '7.jpg' )   */
+
+	
+		return redirect('dashboard/blogs')->withSuccess('Image Has Been Uploaded');
+	}
+	
 
 	public function store(SaveBlogRequest $request)
 	{
@@ -86,7 +113,7 @@ class BlogsController extends Controller {
 	
 	$blog = Blog::find($id);
 
-	return view('dashboard.blogs.edit')->with('blog', $blog);
+	return view('blogs.edit')->with('blog', $blog);
 	
 	}
 

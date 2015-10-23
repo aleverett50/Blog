@@ -88,7 +88,7 @@
 			</div>
 
 			<div class="col-md-3 min-500">
-			<h4>Recent Blogs</h4>
+			<h1>Recent Blogs</h1>
 
 			@foreach($recent_blogs as $recent_blog)
 			

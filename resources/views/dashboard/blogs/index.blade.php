@@ -12,7 +12,7 @@
 
 	@foreach($blogs as $blog)
 	
-	<tr><td>{{ $blog->created_at }}</td><td>{{ $blog->title }}</td><td>{{ $blog->blog_category->title }}</td><td><a class="btn btn-primary" href="{{url('blogs/'.$blog->id.'/edit')}}">Edit</a></td></tr>
+	<tr><td>{{ $blog->created_at }}</td><td>{{ $blog->title }}</td><td>{{ $blog->blog_category->title }}</td><td><a class="btn btn-primary" href="{{url('blogs/'.$blog->id.'/edit')}}">Edit</a> <a class="btn btn-primary" href="{{url('blogs/'.$blog->id.'/upload')}}">Add Image</a></td></tr>
 		
 	
 	@endforeach
